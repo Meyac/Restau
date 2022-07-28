@@ -1,0 +1,78 @@
+@import '../../sass_vars.scss';
+
+.textInput {
+    border-radius: 20px;
+    width: 100%;
+    border: 1px solid rgb(173, 153, 213);
+    height: 5vh;
+    padding: 4vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    font-size: 1.25rem;
+    background-color: white;
+    margin-bottom: 2.5vw;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: rgb(73, 53, 112);
+
+}
+
+.textInput::placeholder {
+    color: rgb(173, 153, 213);
+    user-select: none;
+}
+
+.textInput:focus {
+    outline: none!important;
+    border: 2px solid rgb(173, 153, 213);
+    color: rgb(73, 53, 112);
+}
+
+.addInput {
+    border-color: #ffbad0!important;
+}
+
+.addInput::placeholder {
+    color: #ffbad0!important;
+}
+
+.modifyInput {
+    background-color: transparent;
+    border: none;
+    user-select: none;
+    box-sizing: border-box;
+    outline: none;
+    z-index: 10;
+}
+
+.bigFont {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: rgb(73, 53, 112);
+    // color: #f0e2f6;
+}
+
+.bigFont::placeholder {
+    color: rgb(73, 53, 112);
+    // color: #f0e2f6;
+}
+
+.smallFont {
+    color: rgb(73, 53, 112);
+    margin-bottom: .5*$base_margin;
+    // color: white;
+    font-size: 2rem;
+}
+
+.smallFont::placeholder {
+    color: rgb(73, 53, 112);
+    // color: #f0e2f6;
+}
+
+.smallFont::placeholder {
+}
+
+.disabled {
+    // pointer-events: all;
+    cursor: text;
+}

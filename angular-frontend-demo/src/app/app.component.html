@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="searchCont">
+    <div class="inputCont">
+      <h1 class="heading">Restaus</h1>
+      <app-mode-selector (onStateChange)="changeInputState()"></app-mode-selector>
+    </div>
+    <div #inputs class="inputCont">
+        <app-input-field style="flex: 1" inputClass="textInput {{addState ? 'addInput' : null}}" [addState]="addState"  (onChangeText)="changeName($event)" loc={{location}} field="Restaurant" inputType="text"></app-input-field>
+        <app-input-field style="flex: 2" inputClass="textInput {{addState ? 'addInput' : null}}" [addState]="addState" (onChangeText)="changeLocation($event)" loc={{name}} field="City" inputType="text"></app-input-field>
+        <app-input-field style="flex: 1; display: {{addState ? 'block' : 'none'}}" inputClass="textInput addInput" [addState]="addState" (onChangeNumber)="changeCustomerCount($event)" loc={{customers}} field="Monthly customers" inputType="number"></app-input-field>
+    </div>
+    <div class="inputCont">
+      <app-button [addState]="addState" iconUrl="{{addState ? 'https://img.icons8.com/ios-glyphs/90/493570/plus-math.png' : 'https://img.icons8.com/material-rounded/96/493570/search.png'}}" btnClass="searchBtn {{addState ? 'addBtn' : null}}" btnText="{{addState ? 'Create new entry' : 'Search restaurants'}}" (onSubmit)="addState ? createNewEntry() : specificSearch()"></app-button>
+    </div>
+  </div>
+  <div class="resultsCont">
+    <ng-component #target>
+    </ng-component>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,96 @@
+@import '../sass_vars.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+}
+
+.heading {
+    font-size: 11vw;
+    min-width: fit-content;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    background-color:hsla(0,0%,100%,1);
+    background-image:
+    // radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+    // radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+    // radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+    // radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+    // radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+    // radial-gradient(at 76% 87%, hsla(0,0%,100%,0.88) 0px, transparent 50%),
+    // radial-gradient(at 17% 18%, hsla(342,0%,100%,1) 0px, transparent 50%);
+    radial-gradient(at 40% 20%, hsla(189,100%,56%,.5) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(255, 174, 103, 0.1) 0px, transparent 50%),
+    //radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 65%),
+    radial-gradient(at 80% 50%, #fe59904d 0px, transparent 40%),
+    radial-gradient(at 0% 100%, rgba(255, 198, 203, 0.8) 0px, transparent 40%),
+    radial-gradient(at 76% 87%, hsla(0,0%,100%,0.88) 0px, transparent 50%),
+    radial-gradient(at 17% 18%, hsla(342,0%,100%,1) 0px, transparent 80%);
+
+    background-color:#ff99e4;
+    background-image:
+    radial-gradient(at 40% 20%, hsla(189,100%,56%,.5) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(255, 174, 103, 0.1) 0px, transparent 50%),
+    //radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 65%),
+    radial-gradient(at 80% 50%, #fe59904d 0px, transparent 40%),
+
+
+    radial-gradient(at 0% 83%, hsla(146,0%,100%,1) 0px, transparent 50%),
+    radial-gradient(at 96% 55%, hsla(279,91%,66%,0.46) 0px, transparent 50%),
+    radial-gradient(at 47% 70%, hsla(153,0%,100%,1) 0px, transparent 50%),
+    radial-gradient(at 82% 42%, hsla(334,100%,66%,1) 0px, transparent 50%),
+    radial-gradient(at 37% 2%, hsla(325,100%,61%,1) 0px, transparent 50%),
+    radial-gradient(at 92% 97%, hsla(30,0%,100%,1) 0px, transparent 50%),
+    radial-gradient(at 89% 69%, hsla(240,0%,100%,1) 0px, transparent 50%),
+    radial-gradient(at 89% 18%, hsla(19,0%,100%,1) 0px, transparent 50%),
+    radial-gradient(at 23% 38%, hsla(181,0%,100%,1) 0px, transparent 50%),
+    radial-gradient(at 90% 28%, hsla(261,0%,100%,1) 0px, transparent 50%);
+}
+
+.searchCont {
+    //background-color: #C2D8D3;
+    background-color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.resultsCont {
+    background-color: transparent;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: $base_margin;
+    padding-bottom: 0;
+    //overflow: hidden;
+}
+
+.inputCont {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 80%;
+    text-align: flex-start;
+    justify-content: center;
+    // padding-top: $base_margin;
+}

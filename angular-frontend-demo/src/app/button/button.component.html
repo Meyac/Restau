@@ -1,0 +1,4 @@
+<button [class]="btnClass" (click)="apiCall()">{{btnText === '' ? '' : btnText}}
+    <img *ngIf="iconUrl === '' ? false : true"  class="icon" [src]="iconUrl"/>
+    <div class="{{visible ? 'expandable visible' : 'invisible'}}"></div>
+</button>

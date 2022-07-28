@@ -1,0 +1,108 @@
+@import '../../sass_vars.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;;
+}
+
+.card {
+    display: flex;
+    //background-color: #EBF6F7;
+    background-color: rgba(247, 247, 247, 0.08);
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    flex-direction: column;
+    //flex: 1;
+    width: 100%;
+    margin-bottom: $base_margin;
+    height: 30vw;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    border: 1px solid rgba(210, 210, 210, 0.689);
+    backdrop-filter: blur(86px);
+    overflow: hidden;
+    //box-shadow: inset -4px -4px 8px rgba(136, 136, 136, 0.077);
+    box-shadow: inset -4px -4px 8px rgba(73, 53, 112, 0.077);
+    flex-direction: row;
+
+    
+    .restaurantName {
+        font-size: 2rem;
+        color: rgb(73, 53, 112);
+        color: white;
+        user-select: none;
+    // font-family: 'Arial';
+
+    }
+
+    .restaurantName:hover {
+        cursor: text;
+    }
+}
+
+.card:hover {
+    backface-visibility: hidden!important;
+    -webkit-font-smoothing: subpixel-antialiased;
+    box-shadow: 0px 5px 16px rgba(33, 33, 33, 0.03);
+    transform: scale(1.025);
+    background-color: #acabdc45;
+    .deleteBtn {
+        opacity: 1;
+    }
+}
+
+.deleteBtn {
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.info, .map {
+    flex: 1;
+    box-sizing: border-box;
+    padding: $base_margin/2.5;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .restaurantName {
+        font-size: 4vw;
+    }
+
+}
+
+.header {
+    flex: 1;
+}
+
+.additionalInfo {
+    flex: 3;
+    overflow: hidden;
+}
+
+.infos {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Arial';
+}
+
+#gmap_canvas {
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.143);
+}
+
+h3 {
+    margin-bottom: $base_margin/10;
+    // color: rgb(73, 53, 112);
+    color: #f0e2f6;
+    font-weight: 500;
+}
+
+.icon {
+    aspect-ratio: 1/1;
+    width: 1rem;
+    margin-right: $base_margin/10;
+}

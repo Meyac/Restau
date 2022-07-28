@@ -1,0 +1,134 @@
+@import '../../sass_vars.scss';
+
+.searchBtn {
+    background-color: rgb(173, 153, 213);
+    color: rgb(73, 53, 112);
+    border-radius: 20px;
+    width: 100%;
+    padding: 2vw;
+    font-size: 1.75rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    //text-align: left;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    text-align: left;
+
+    .icon {
+        position: absolute;
+        right: $base_margin/2;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        aspect-ratio: 1/1;
+        height: 2.5rem;
+    }
+}
+
+.searchBtn:hover {
+    border-radius: 200px;
+}
+
+.addBtn {
+    // background-color: #ffc3d6!important;
+    background-color:#ffbad0;
+    background-image:
+    // radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+    // radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+    // radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+    // radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+    // radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+    // radial-gradient(at 76% 87%, hsla(0,0%,100%,0.88) 0px, transparent 50%),
+    // radial-gradient(at 17% 18%, hsla(342,0%,100%,1) 0px, transparent 50%);
+    radial-gradient(at 100% 30%, #f6eafb 0px, transparent 40%),
+    radial-gradient(at 80% 0%, rgba(255, 174, 103, 0.1) 0px, transparent 50%),
+    radial-gradient(at 10% 70%, hsla(189,100%,56%,.5) 0px, transparent 35%),
+    radial-gradient(at 80% 50%, #fe59904d 0px, transparent 40%),
+    radial-gradient(at 0% 100%, rgba(255, 198, 203, 0.8) 0px, transparent 40%),
+}
+
+.deleteBtn {
+    position: absolute;
+    border-radius: 200000px;
+    border: none;
+    background-color: transparent;
+    aspect-ratio: 1/1;
+    margin: 0;
+    text-indent: 0;
+    padding-left: $base_margin/8;
+    padding-right: $base_margin/8;
+    left: $base_margin/2.5;
+    bottom: $base_margin/2.5;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #f6eafbd1;
+    border-radius: 20px;
+    z-index: 1;
+
+    .icon {
+        aspect-ratio: 1/1;
+        display: block;
+        margin: auto;
+        width: $base_margin/3;
+    }
+}
+
+.deleteBtn:hover {
+    transform: scale(1.1);
+    // box-shadow: 0px 0px 20px white;
+    box-shadow: 6px 6px 16px 0 rgba(0, 0, 0, 0.167),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.259);
+    background-color: #f6eafb51;
+}
+
+// .deleteBtn:active {
+//     .expandable {
+//         transform: scale(300);
+//         background-color: #f47dc044;
+//     }
+// }
+
+.editBtn {
+    // background-color: greenyellow!important;
+}
+
+// .icon {
+//     aspect-ratio: 1/1;
+//     display: block;
+//     margin: auto;
+//     width: $base_margin/3;
+//     mix-blend-mode: color-burn;
+// }
+
+.expandable {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    border-radius: 10000px;
+    transition: transform 1s ease-in-out;
+}
+
+.visible {
+    // .expandable {
+        animation: expand 0.5s ease-in-out 1;
+    // }
+}
+
+.invisible {
+    display: none;
+}
+
+@keyframes expand {
+    0% {background-color: #acabdc22; transform: scale(2);}
+    50% {background-color: #acabdc66; transform: scale(50)}
+    80% {background-color: #acabdc44; transform: scale(200);}
+    90% {background-color: #acabdc22; transform: scale(200);}
+    100% {background-color: #acabdc00; transform: scale(200); display: none;}
+}
